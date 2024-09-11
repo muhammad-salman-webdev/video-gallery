@@ -61,23 +61,19 @@ galleryCards.forEach((card, i) => {
       card.classList.add("anim-popup");
     }, 10);
   });
+  const closeVideo = () => {
+    card.classList.remove("anim-popup");
+    setTimeout(() => {
+      card.classList.remove("show-popup");
+    }, 300);
 
-  overLay.addEventListener("click", () => {
-    card.classList.remove("anim-popup");
-    setTimeout(() => {
-      card.classList.remove("show-popup");
-    }, 300);
-    playPauseBtn.click();
-    video.pause();
-  });
-  closeIcon.addEventListener("click", () => {
-    card.classList.remove("anim-popup");
-    setTimeout(() => {
-      card.classList.remove("show-popup");
-    }, 300);
-    playPauseBtn.click();
-    video.pause();
-  });
+    if (playPauseBtn.classList.contains("played")) {
+      playPauseBtn.classList.remove("played");
+      video.pause();
+    }
+  };
+  overLay.addEventListener("click", closeVideo);
+  closeIcon.addEventListener("click", closeVideo);
 
   playPauseBtn.addEventListener("click", (e) => {
     playPauseBtn.classList.toggle("played");

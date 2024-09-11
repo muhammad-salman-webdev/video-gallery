@@ -126,6 +126,7 @@
                         background: #2c2c2c3b;
                         backdrop-filter: blur(3px);
                         transition: all .3s ease;
+                        opacity: 0;
                     }
 
                     .video-container {
@@ -143,8 +144,8 @@
                         .close-icon {
                             i {
                                 position: absolute;
-                                right: 18px;
-                                top: 18px;
+                                right: 32px;
+                                top: 32px;
                                 cursor: pointer;
                                 width: 36px;
                                 aspect-ratio: 1/1;
@@ -232,6 +233,30 @@
 
             .custom_gallery-cards {
                 grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .custom_gallery-section {
+        & .c-container {
+            & .custom_gallery-cards {
+                & .custom_gallery-card {
+                    .popup {
+                        .video-container {
+                            padding: 20px;
+
+                            .close-icon {
+                                i {
+                                    right: 10px;
+                                    top: 7px;
+                                    width: 32px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
