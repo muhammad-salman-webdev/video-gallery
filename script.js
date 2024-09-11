@@ -68,6 +68,7 @@ galleryCards.forEach((card, i) => {
       card.classList.remove("show-popup");
     }, 300);
     playPauseBtn.click();
+    video.pause();
   });
   closeIcon.addEventListener("click", () => {
     card.classList.remove("anim-popup");
@@ -75,6 +76,7 @@ galleryCards.forEach((card, i) => {
       card.classList.remove("show-popup");
     }, 300);
     playPauseBtn.click();
+    video.pause();
   });
 
   playPauseBtn.addEventListener("click", (e) => {
