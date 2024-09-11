@@ -67,12 +67,14 @@ galleryCards.forEach((card, i) => {
     setTimeout(() => {
       card.classList.remove("show-popup");
     }, 300);
+    playPauseBtn.click();
   });
   closeIcon.addEventListener("click", () => {
     card.classList.remove("anim-popup");
     setTimeout(() => {
       card.classList.remove("show-popup");
     }, 300);
+    playPauseBtn.click();
   });
 
   playPauseBtn.addEventListener("click", (e) => {

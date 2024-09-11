@@ -132,7 +132,7 @@
                         max-width: 1000px;
                         width: 96%;
                         position: relative;
-                        padding: 30px;
+                        padding: 50px;
                         border-radius: 20px;
                         background: white;
                         background: #121212;
@@ -154,6 +154,14 @@
                                 background: white;
                                 color: #121212;
                                 z-index: 3;
+                                font-size: 20px;
+                                transition: all .3s ease;
+
+                                &:hover {
+                                    background: rgb(114, 114, 114);
+                                    color: white;
+                                    rotate: 90deg;
+                                }
                             }
                         }
 
